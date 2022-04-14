@@ -2,8 +2,8 @@
 import pandas as pd
 
 import dash
-from dash import dcc
-from dash import html
+import dash_core_components as dcc
+import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 
@@ -76,7 +76,7 @@ server = app.server
 app.layout = html.Div([
     #1
     html.Div([
-        html.H1(children='CRYPTO VIS', style={'font-size':'70'}),
+        html.H1(children='CRYPTOVIS', style={'font-size':'70'}),
         html.Img(src=app.get_asset_url('novaims.png'),
                  style={'position': 'relative', 'width': '4%', 'left': '-10px', 'top': '-75px'}),
     ], className='top_bar'),
@@ -155,8 +155,7 @@ app.layout = html.Div([
                 html.Div([
                     html.Div([
                         html.H4(id='fact_index',style={"text-align": "center",
-                                                       "font-weight": "bold", 'font-size': 25}),
-                        html.Br(),
+                                                       "font-weight": "bold", 'font-size': 20}),
                         html.Button('Click', id='button', n_clicks=3)
                     ], className='box_fact')
                 ], className='box'),
